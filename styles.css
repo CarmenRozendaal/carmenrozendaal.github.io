@@ -8,12 +8,18 @@ header {
     background-color: blue;
 }
 
-nav {
+#Logo {
+    width: 4em;
+    margin: 15px 0px -5px 0px;
+    text-align: left;
+}
+
+/* nav {
     color:white;
 }
 
 nav ul {
-    background-color:rgb(50, 90, 95);
+    background-color: white;
     list-style:none;
     padding:0.7em;
     display:flex;
@@ -24,14 +30,16 @@ nav ul li {
     margin:0em;
     padding:0em;
     justify-items: center;
-}
+} */
 
 h1 {
-    font-size: large;
-    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    color: blue;
 }
 
 h2 {
-    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
     color: grey;
 }
