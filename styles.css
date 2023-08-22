@@ -4,7 +4,7 @@ body {
 
 header {
     width: 100%;
-    height: 5em;
+    height: 8em;
     background-color: blue;
 }
 
@@ -30,4 +30,11 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100;
     color: black;
+}
+
+#Foto {
+    width: 10em;
+    margin: 2em;
+    display: flex;
+    text-align: right;
 }
