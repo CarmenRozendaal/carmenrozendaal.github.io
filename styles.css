@@ -10,11 +10,11 @@ header {
 
 #Logo {
     width: 4em;
-    margin: 15px 0px -5px 0px;
+    margin: 2em;
     text-align: left;
 }
 
-/* nav {
+nav {
     color:white;
 }
 
@@ -30,7 +30,7 @@ nav ul li {
     margin:0em;
     padding:0em;
     justify-items: center;
-} */
+}
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
