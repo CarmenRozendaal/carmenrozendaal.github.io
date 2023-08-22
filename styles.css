@@ -14,24 +14,6 @@ header {
     text-align: left;
 }
 
-nav {
-    color:white;
-}
-
-nav ul {
-    background-color: white;
-    list-style:none;
-    padding:0.7em;
-    display:flex;
-    justify-content:center;
-}
-
-nav ul li {
-    margin:0em;
-    padding:0em;
-    justify-items: center;
-}
-
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
@@ -40,6 +22,12 @@ h1 {
 
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     color: grey;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    color: black;
 }
