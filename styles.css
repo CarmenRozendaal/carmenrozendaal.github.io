@@ -5,7 +5,7 @@ body {
 header {
     width: 100%;
     height: 8em;
-    background-color: blue;
+    background-color: rgb(20, 57, 69);
 }
 
 #Logo {
@@ -14,10 +14,22 @@ header {
     text-align: left;
 }
 
+button {
+    width: 12em;
+    height: 4em;
+    background-color: orange;
+    border-radius: 1.2em;
+    justify-content: right;
+}
+
+button p {
+    color: white;
+}
+
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
-    color: blue;
+    color: orange;
 }
 
 h2 {
@@ -33,8 +45,30 @@ p {
 }
 
 #Foto {
-    width: 10em;
+    width: 12em;
+    height: auto;
+    border-radius: 1.4em;
+}
+
+.Projecten img {
+    width: 24em;
+    height: auto;
+    display: flex;
+    border-radius: 1em;
+}
+
+footer {
+    width: 100%;
+    height: 20;
+    background-color: rgb(20, 57, 69);
+    position: absolute;
+}
+
+footer img {
+    width: 2em;
+    height: auto;
+    margin: 2em;
     margin: 2em;
     display: flex;
-    text-align: right;
+    justify-content: center;
 }
