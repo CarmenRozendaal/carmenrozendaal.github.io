@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     background-color: white;
     margin: 0;
@@ -9,9 +10,33 @@ body {
 }
 
 nav {
+    padding: 2em 0;
     width: 100%;
-    height: 8em;
+    height: 6em;
     background-color: rgb(20, 57, 69);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+nav p {
+    color: white;
+    font-family: "Inter";
+    font-size: 18pt;
+    margin: 0em;
+    margin-right: 2em;
+    
+}
+
+nav a {
+    color: white;
+    font-family: "Inter";
+    font-size: 18pt;
+    margin: 0em;
+    margin-right: 2em;
 }
 
 header .container {
@@ -24,9 +49,10 @@ header .right {
     width: 33.333%;
     max-width: 240px;
     flex-shrink: 0;
- }
+}
+
 .container {
-    padding: 0 2rem;
+    padding: 0 6rem;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -50,42 +76,51 @@ button p {
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
+    font-family: "Darker Grotesque";
+    font-weight: 100;
+    font-size: 24pt;
     color: orange;
+    margin-top: 4em;
 }
 
 h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
-    color: grey;
+    font-family: "Darker Grotesque";
+    font-size: 32pt;
+    color: black;
+}
+
+h3 {
+    font-family: "Darker Grotesque";
+    font-size: 18pt;
+    color: orange;
+}
+
+h4 {
+    font-family: "Inter";
+    font-size: 16pt;
+    color: black;
 }
 
 p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 100;
+    font-family: "Inter";
+    font-size: 12pt;
     color: black;
 }
 
 #Foto {
     width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 1.4em;
+    margin-top: 8em;
 }
 
 .Projecten ul {
-    display: flex;
-    flex-wrap: wrap;
     list-style: none;
     margin: 0 -20px;
     padding: 0;
 }
 
 .Projecten ul li {
-    width: 33.333%;
     padding: 0 20px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .Projecten img {
@@ -105,11 +140,11 @@ p {
 
 footer {
     width: 100%;
-    color: white;
-    padding: 2rem 0;
-    
-    background-color: rgb(20, 57, 69);
-    
+    height: 24em;
+    color: black;
+    padding: 1.5rem 0;
+    margin-top: 4em;
+    background-color: rgba(252, 203, 146, 1);
 }
 
 footer img {
@@ -132,8 +167,19 @@ footer li a {
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: black;
+    font-size: 8pt;
 }
 
 footer p {
-    color: white;
+    font-family: "Darker Grotesque";
+    font-size: 16pt;
+    color: black;
+}
+
+footer h3 {
+    font-family: "Darker Grotesque";
+    font-weight: bold;
+    font-size: 24pt;
+    color: black;
 }
