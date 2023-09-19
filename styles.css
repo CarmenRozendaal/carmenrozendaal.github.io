@@ -12,8 +12,7 @@ body {
 nav {
     padding: 2em 0;
     width: 100%;
-    height: 6em;
-    background-color: rgb(20, 57, 69);
+    height: 4em;
 }
 
 nav .container {
@@ -23,18 +22,17 @@ nav .container {
 }
 
 nav p {
-    color: white;
+    color: grey;
     font-family: "Inter";
-    font-size: 18pt;
+    font-size: 16pt;
     margin: 0em;
-    margin-right: 2em;
     
 }
 
 nav a {
-    color: white;
+    color: grey;
     font-family: "Inter";
-    font-size: 18pt;
+    font-size: 16pt;
     margin: 0em;
     margin-right: 2em;
 }
@@ -57,35 +55,18 @@ header .right {
     margin: 0 auto;
 }
 
-#Logo {
-    width: 4em;
-    margin: 2em;
-    text-align: left;
-}
-
-button {
-    width: 12em;
-    height: 4em;
-    background-color: orange;
-    border-radius: 1.2em;
-    justify-content: right;
-}
-
-button p {
-    color: white;
-}
-
 h1 {
     font-family: "Darker Grotesque";
     font-weight: 100;
     font-size: 24pt;
     color: orange;
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
 h2 {
     font-family: "Darker Grotesque";
     font-size: 36pt;
+    line-height: 44pt;
     color: black;
     margin-bottom: 2em;
 }
@@ -97,21 +78,16 @@ h3 {
 }
 
 h4 {
-    font-family: "Inter";
-    font-size: 16pt;
+    font-family: "Darker Grotesque";
+    font-size: 18pt;
     color: black;
-    align-items: center;
-}
-
-p {
-    font-family: "Inter";
-    font-size: 12pt;
-    color: black;
+    margin: 1em 0em 1em 0em;
+    text-align: center;
 }
 
 #Foto {
     width: 100%;
-    margin-top: 8em;
+    margin: 8em 0em 2em 0em;
 }
 
 .Projecten ul {
@@ -129,6 +105,14 @@ p {
     width: 100%;
     height: auto;
     border-radius: 1em;
+    margin: 0;
+}
+
+.Projecten p {
+    font-family: "Inter";
+    font-size: 12pt;
+    color: black;
+    text-align: center;
 }
 
 .Tijdlijn .container {
@@ -136,8 +120,31 @@ p {
     gap: 40px;
 }
 
+.Tijdlijn ul {
+    list-style: none;
+    padding: 0;
+}
+
 .Tijdlijn article {
-    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-right: 4em;
+}
+
+.Tijdlijn h4 {
+    font-family: "Inter";
+    font-size: 16pt;
+    color: black;
+    margin: 2em 0em 1em 0em;
+    text-align: left;
+}
+
+.Tijdlijn p {
+        font-family: "Inter";
+        font-size: 12pt;
+        color: black;
+        text-align: left;
 }
 
 footer {
