@@ -85,8 +85,9 @@ h1 {
 
 h2 {
     font-family: "Darker Grotesque";
-    font-size: 32pt;
+    font-size: 36pt;
     color: black;
+    margin-bottom: 2em;
 }
 
 h3 {
@@ -99,6 +100,7 @@ h4 {
     font-family: "Inter";
     font-size: 16pt;
     color: black;
+    align-items: center;
 }
 
 p {
@@ -142,15 +144,14 @@ footer {
     width: 100%;
     height: 24em;
     color: black;
-    padding: 1.5rem 0;
-    margin-top: 4em;
+    padding: 0;
+    margin: 0;
     background-color: rgba(252, 203, 146, 1);
 }
 
 footer img {
     width: 2em;
     height: auto;
-    margin: 2em;
     margin: 2em;
     display: flex;
     justify-content: center;
@@ -182,4 +183,5 @@ footer h3 {
     font-weight: bold;
     font-size: 24pt;
     color: black;
+    padding-top: 2em;
 }
