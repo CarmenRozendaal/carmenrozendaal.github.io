@@ -33,6 +33,10 @@ nav .links {
     align-items: flex-end;
 }
 
+nav a:hover {
+    color:black;
+}
+
 nav a {
     color: grey;
     font-family: "Inter";
