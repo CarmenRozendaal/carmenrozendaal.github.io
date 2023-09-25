@@ -22,11 +22,15 @@ nav .container {
 }
 
 nav p {
-    color: grey;
     font-family: "Inter";
     font-size: 16pt;
+    color: grey;
     margin: 0em;
     
+}
+
+nav .links {
+    align-items: flex-end;
 }
 
 nav a {
@@ -34,7 +38,7 @@ nav a {
     font-family: "Inter";
     font-size: 16pt;
     margin: 0em;
-    margin-right: 2em;
+    padding: 1em;
 }
 
 header .container {
@@ -56,15 +60,16 @@ header .right {
 }
 
 h1 {
-    font-family: "Darker Grotesque";
-    font-weight: 100;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 400;
     font-size: 24pt;
     color: orange;
     margin-top: 3em;
 }
 
 h2 {
-    font-family: "Darker Grotesque";
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
     font-size: 36pt;
     line-height: 44pt;
     color: black;
@@ -72,96 +77,104 @@ h2 {
 }
 
 h3 {
-    font-family: "Darker Grotesque";
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 400;
     font-size: 18pt;
     color: orange;
 }
 
 h4 {
-    font-family: "Darker Grotesque";
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
     font-size: 18pt;
     color: black;
     margin: 1em 0em 1em 0em;
     text-align: center;
 }
 
-#Foto {
+#photo {
     width: 100%;
     margin: 8em 0em 2em 0em;
 }
 
-.Projecten ul {
+.projects ul {
     list-style: none;
     margin: 0 -20px;
     padding: 0;
 }
 
-.Projecten ul li {
+.projects ul li {
     padding: 0 20px;
     margin-bottom: 80px;
 }
 
-.Projecten img {
+.projects img {
     width: 100%;
     height: auto;
     border-radius: 1em;
     margin: 0;
 }
 
-.Projecten p {
-    font-family: "Inter";
+.projects p {
+    font-family: 'Inter', sans-serif;
     font-size: 12pt;
     color: black;
     text-align: center;
 }
 
-.Tijdlijn .container {
+.timeline .container {
     display: flex;
     gap: 40px;
 }
 
-.Tijdlijn ul {
+.timeline ul {
     list-style: none;
     padding: 0;
 }
 
-.Tijdlijn article {
+.timeline article.education {
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    margin-right: 4em;
 }
 
-.Tijdlijn h4 {
-    font-family: "Inter";
+.timeline article.workexperience {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.timeline h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     font-size: 16pt;
     color: black;
     margin: 2em 0em 1em 0em;
     text-align: left;
 }
 
-.Tijdlijn p {
-        font-family: "Inter";
-        font-size: 12pt;
-        color: black;
-        text-align: left;
+.timeline p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 12pt;
+    color: black;
+    text-align: left;
 }
 
 footer {
     width: 100%;
-    height: 24em;
+    height: 440px;
     color: black;
     padding: 0;
-    margin: 0;
     background-color: rgba(252, 203, 146, 1);
 }
 
 footer img {
-    width: 2em;
-    height: auto;
-    margin: 2em;
     display: flex;
     justify-content: center;
+    width: 2em;
+    height: auto;
+    margin: 0em 2em 0em 0em;
 }
 
 footer ul {
@@ -180,14 +193,15 @@ footer li a {
 }
 
 footer p {
-    font-family: "Darker Grotesque";
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 400;
     font-size: 16pt;
     color: black;
 }
 
 footer h3 {
-    font-family: "Darker Grotesque";
-    font-weight: bold;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
     font-size: 24pt;
     color: black;
     padding-top: 2em;
