@@ -27,7 +27,7 @@ nav .container {
 
 nav p {
     font-size: 16pt;
-    color: grey;
+    color: #820000;
     margin: 0em;
 }
 
@@ -36,11 +36,11 @@ nav .links {
 }
 
 nav a:hover {
-    color:black;
+    color:#820000;
 }
 
 nav a {
-    color: grey;
+    color: #572406;
     font-size: 16pt;
     margin: 0em;
     padding: 0.5em;
@@ -93,7 +93,7 @@ h3 {
 h4 {
     font-weight: 600;
     font-size: 18pt;
-    color: black;
+    color: #572406;
     margin: 1em 0em 1em 0em;
     text-align: center;
 }
@@ -134,7 +134,7 @@ h4 {
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 12pt;
-    color: black;
+    color: #572406;
     text-align: center;
 }
 
@@ -158,19 +158,17 @@ h4 {
 
 
 .timeline h4 {
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16pt;
-    color: black;
+    color: #572406;
     margin: 4em 0em 1em 0em;
     text-align: left;
 }
 
 .timeline p {
-    font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 12pt;
-    color: black;
+    color: #572406;
     text-align: left;
 }
 
