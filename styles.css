@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    font-family: "Inter", sans-serif;
-    background-color: #FAF2E7;
+    background-color: white;
     margin: 0;
     padding: 0;
-    letter-spacing: -0.025em;
 }
 
 nav {
@@ -26,6 +22,7 @@ nav .container {
 }
 
 nav p {
+    font-family: "Inter";
     font-size: 16pt;
     color: grey;
     margin: 0em;
@@ -41,6 +38,7 @@ nav a:hover {
 
 nav a {
     color: grey;
+    font-family: "Inter";
     font-size: 16pt;
     margin: 0em;
     padding: 0.5em;
@@ -63,34 +61,35 @@ header .right {
     max-width: 1280px;
     margin: 0 auto;
 }
-h1,h2,h3,h4,h5 {
-    font-family: 'Albert Sans', sans-serif;
-}
 
 h1 {
-    font-weight: 600;
-    font-size: 107px;
-    color: #820000;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 400;
+    font-size: 24pt;
+    color: orange;
     margin-top: 3em;
 }
 
 h2 {
-    font-weight: 200;
-    font-size: 24pt;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 36pt;
     line-height: 44pt;
-    color: #572406;
+    color: black;
     margin-bottom: 2em;
 }
 
 h3 {
+    font-family: 'Darker Grotesque', sans-serif;
     font-weight: 400;
     font-size: 18pt;
-    color: #820000;
+    color: orange;
     margin: 0em;
     padding-bottom: 1em;
 }
 
 h4 {
+    font-family: 'Darker Grotesque', sans-serif;
     font-weight: 600;
     font-size: 18pt;
     color: black;
@@ -174,10 +173,53 @@ h4 {
     text-align: left;
 }
 
+footer {
+    width: 100%;
+    height: auto;
+    color: black;
+    padding: 0;
+    background-color: rgba(252, 203, 146, 1);
+}
+
+footer img {
+    display: flex;
+    justify-content: center;
+    width: 2em;
+    height: auto;
+    margin: 0em 2em 0em 0em;
+}
+
+footer ul {
+    list-style: none;
+    padding: 1em 0;
+    margin: 0em;
+}
 
 
+footer li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 8pt;
+    margin: 0;
+}
 
+footer p {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 200;
+    font-size: 16pt;
+    color: black;
+}
 
+footer h3 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 24pt;
+    color: black;
+    padding-top: 1em;
+    padding-bottom: 0;
+}
 
 
 @media (max-width: 800px) {
