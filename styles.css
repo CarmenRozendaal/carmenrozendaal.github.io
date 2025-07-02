@@ -10,28 +10,38 @@ body {
     background-color: #FAF2E7;
     margin: 0;
     padding: 0;
-    letter-spacing: -0.025em;
+    letter-spacing: -0px;
 }
 
 nav {
-    padding: 2em 0;
+    padding: 24px 0 0 0;
     width: 100%;
-    height: 4em;
+}
+
+nav .label {
+    height: 48px;
+    background-color: #4F5D2F;
+    border-radius: 40px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
 }
 
 nav .container {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     gap: 80px;
 }
 
 nav p {
     font-size: 16pt;
-    color: #820000;
-    margin: 0em;
+    color: white;
+    margin: 0;
 }
 
 nav .links {
+    color: #820000;
     align-items: flex-end;
 }
 
@@ -42,8 +52,8 @@ nav a:hover {
 nav a {
     color: #572406;
     font-size: 16pt;
-    margin: 0em;
-    padding: 0.5em;
+    margin: 0;
+    padding: 8px;
 }
 
 header .container {
@@ -63,44 +73,46 @@ header .right {
     max-width: 1280px;
     margin: 0 auto;
 }
+
 h1,h2,h3,h4,h5 {
     font-family: 'Albert Sans', sans-serif;
 }
 
 h1 {
     font-weight: 600;
-    font-size: 107px;
+    font-size: 104pt;
     color: #820000;
-    margin-top: 3em;
+    margin-top: 104px;
+    margin-bottom: 64px;
 }
 
 h2 {
     font-weight: 200;
-    font-size: 24pt;
-    line-height: 44pt;
+    font-size: 20pt;
+    line-height: 32pt;
     color: #572406;
-    margin-bottom: 2em;
+    margin-bottom: 32px;
 }
 
 h3 {
     font-weight: 400;
     font-size: 18pt;
     color: #820000;
-    margin: 0em;
-    padding-bottom: 1em;
+    margin: 0;
+    padding-bottom: 16px;
 }
 
 h4 {
     font-weight: 600;
     font-size: 18pt;
     color: #572406;
-    margin: 1em 0em 1em 0em;
+    margin: 16px 0 16px 0;
     text-align: center;
 }
 
 #photo {
     width: 100%;
-    margin: 8em 0em 2em 0em;
+    margin: 80px 0;
 }
 
 .projects ul {
@@ -150,10 +162,9 @@ h4 {
 }
 
 .timeline article {
-    display: flex;
     justify-content: space-between;
     gap: 80px;
-    margin: 0 0 2em 0;
+    margin: 0 0 32px 0;
 }
 
 
@@ -172,10 +183,38 @@ h4 {
     text-align: left;
 }
 
+footer {
+    padding: 24px 0 0 0;
+    width: 100%;
+}
 
 
+footer .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 80px;
+    border-bottom: 2px solid #820000;
+    margin-bottom: 64px;
+}
 
+footer .links {
+    color: #820000;
+    align-items: flex-end;
+}
 
+footer a {
+    color: #572406;
+    font-size: 16pt;
+    margin: 0;
+    padding: 8px;
+}
+
+footer h3 {
+    font-size: 16pt;
+    color: #820000;
+    margin: 0;
+}
 
 
 @media (max-width: 800px) {
@@ -188,30 +227,37 @@ h4 {
     }
     
     nav a {
-        font-size: 12pt;
+        font-size: 14pt;
     }
+
     h1 {
-        margin-top: 0;
-        font-size: 20pt;
+        font-size: 40pt;
+        margin: 0;
     }
+
     h2 {
-        font-size: 24pt;
-        line-height: 32pt;
+        font-size: 16pt;
+        line-height: 24pt;
     }
+
     #photo {
        margin: 0;
     }
+
     header {
         margin-top: 3rem;
     }
+
     .timeline .container {
         flex-direction: column;
         gap: 20px;
     }
+
     .timeline article {
         flex-direction: column;
         gap: 1rem;
     }
+
     .timeline h4 {
         margin-top: 0;
         padding: 1em 0;
