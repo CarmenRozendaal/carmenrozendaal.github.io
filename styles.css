@@ -36,7 +36,7 @@ nav .container {
 
 nav p {
     font-size: 16pt;
-    color: white;
+    color: #FAF2E7;
     margin: 0;
 }
 
@@ -74,6 +74,20 @@ header .right {
     margin: 0 auto;
 }
 
+.container .button {
+    height:48px;
+    background-color: #820000;
+    border-radius: 40px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.button p {
+    font-size: 16pt;
+    color: #FAF2E7;
+}
+
 h1,h2,h3,h4,h5 {
     font-family: 'Albert Sans', sans-serif;
 }
@@ -81,6 +95,7 @@ h1,h2,h3,h4,h5 {
 h1 {
     font-weight: 600;
     font-size: 104pt;
+    line-height: 100pt;
     color: #820000;
     margin-top: 104px;
     margin-bottom: 64px;
@@ -167,7 +182,6 @@ h4 {
     margin: 0 0 32px 0;
 }
 
-
 .timeline h4 {
     font-weight: 600;
     font-size: 16pt;
@@ -187,7 +201,6 @@ footer {
     padding: 24px 0 0 0;
     width: 100%;
 }
-
 
 footer .flex {
     display: flex;
@@ -221,6 +234,7 @@ footer h3 {
     .container {
         padding: 0 1.5rem;
     }
+
     header .container {
       flex-direction: column-reverse;
        gap: 2rem;
@@ -233,11 +247,14 @@ footer h3 {
     h1 {
         font-size: 40pt;
         margin: 0;
+        padding: 0;
     }
 
     h2 {
         font-size: 16pt;
         line-height: 24pt;
+        margin: 0;
+        padding: 0;
     }
 
     #photo {
