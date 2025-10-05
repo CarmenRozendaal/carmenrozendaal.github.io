@@ -85,7 +85,7 @@ header .right {
 
 .button p {
     font-size: 16pt;
-    color: #FAF2E7;
+    color: white;
 }
 
 h1,h2,h3,h4,h5 {
@@ -141,21 +141,73 @@ h4 {
     margin-bottom: 80px;
 }
 
-.project-image-wrapper {
-    overflow: hidden;
+.container .button-links, .container .button-rechts {
+    height:48px;
+    width: 48px;
+    background-color: red;
+    border-radius: 40px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.projects img {
+
+.container .button-links img, .container .button-rechts img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.project-image-slider {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 1em;
+    overflow: hidden; /* voorkomt dat img's buiten de container vallen */
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    gap: 1em;
+  }
+  
+  .slides::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .slides::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  .slide img {
     width: 100%;
     height: auto;
     border-radius: 1em;
-    margin: 0;
-    transition: 0.5s ease;
-}
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  
 
-.projects li:hover img {
-    transform: scale(1.03);
-}
+
+
+
 
 .projects p {
     font-family: 'Inter', sans-serif;
