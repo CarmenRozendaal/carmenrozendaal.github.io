@@ -164,10 +164,12 @@ document.querySelectorAll('[data-case-panel]').forEach((panel) => {
   scroller.addEventListener('click', (event) => {
     if (event.target === scroller) requestClose();
   });
-  // Show the floating cross once the close button on the cover has scrolled out of view
+  // The floating cross takes over exactly when the close button reaches its spot
   const coverClose = panel.querySelector('.case__close');
+  const floatCross = panel.querySelector('.case__float');
   scroller.addEventListener('scroll', () => {
-    panel.classList.toggle('is-scrolled', coverClose.getBoundingClientRect().bottom < 0);
+    const spot = parseFloat(getComputedStyle(floatCross).top) || 16;
+    panel.classList.toggle('is-scrolled', coverClose.offsetParent && coverClose.getBoundingClientRect().top <= spot);
   }, { passive: true });
 });
 
