@@ -169,7 +169,21 @@ p { text-wrap: pretty; }
   white-space: nowrap;
   transition: background-color .2s;
 }
-.button img { width: 20px; height: 20px; transition: transform .2s; }
+.button img,
+.button svg { width: 20px; height: 20px; flex-shrink: 0; transition: transform .2s; }
+
+/* Coffee steam on "Kennismaken?": the line keeps drawing itself upwards and
+   fading out the same way, like rising steam */
+.icon-coffee__steam {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: steam-rise 1.8s cubic-bezier(.45, 0, .25, 1) infinite;
+}
+@keyframes steam-rise {
+  0% { stroke-dashoffset: 1; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1; }
+}
 .button:hover { background: var(--ink); }
 .button[href="#projecten"] img { transform: rotate(90deg); }
 .button[href="#projecten"]:hover img { transform: rotate(90deg) translateX(3px); }
@@ -217,8 +231,23 @@ p { text-wrap: pretty; }
   font-weight: 600;
   white-space: nowrap;
 }
-.quick-contact a { text-decoration: underline; text-underline-position: from-font; }
-.quick-contact a:hover { opacity: .6; }
+/* Mail / Linkedin / CV: no underline until hover; it draws in from the left and,
+   when the pointer leaves, draws away to the right */
+.quick-contact a { position: relative; text-decoration: none; }
+.quick-contact a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+.quick-contact a:hover::after,
+.quick-contact a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
 
 .nav__toggle { display: none; }
 
@@ -943,6 +972,7 @@ body.has-case { overflow: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .icon-coffee__steam { animation: none; stroke-dashoffset: 0; }
   .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
   .parallax > img,
   .project__img { translate: none !important; scale: none !important; }
