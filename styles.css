@@ -792,7 +792,6 @@ body.has-case { overflow: hidden; }
 }
 .case__lead { max-width: 1017px; margin-top: 0; font-size: 20px; line-height: 1.55; color: var(--ink-soft); }
 
-.case__divider { height: 2px; margin: 0; border: 0; background: var(--border); }
 
 .case__process { display: flex; flex-direction: column; gap: 32px; }
 .case__entry {
@@ -846,6 +845,8 @@ body.has-case { overflow: hidden; }
 .case__site-icon { position: relative; width: 16px; height: 16px; }
 .case__site-icon img { position: absolute; left: 2px; top: 2.125px; width: 12px; height: 12px; transition: filter .2s; }
 .case__site-link:hover .case__site-icon img { filter: invert(1); }
+/* Same "Bekijk deze site" button directly under the introduction */
+.case__site-link--intro { align-self: flex-start; margin-top: 8px; }
 .case__result { aspect-ratio: 1120 / 720; border-radius: 24px; }
 
 .case__footer { gap: 75px; padding: 100px 80px 48px; }
@@ -898,7 +899,6 @@ body.has-case { overflow: hidden; }
   .case__title { font-size: 40px; letter-spacing: -0.02em; }
   .case__lead { margin-top: 12px; font-size: 18px; }
 
-  .case__divider { height: 1px; margin: 0 32px; }
   .case__process { gap: 0; }
   .case__heading { min-height: 0; font-size: 22px; line-height: 1.2; }
 
@@ -923,6 +923,7 @@ body.has-case { overflow: hidden; }
   .case__result-image { order: 1; aspect-ratio: 358 / 240; border-radius: 12px; }
   .case__result > img { left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); }
   .case__site-link { order: 2; justify-content: center; gap: 12px; width: 100%; padding: 10px 16px; border-width: 1px; border-radius: 999px; font-size: 14px; }
+  .case__site-link--intro { width: auto; margin-top: 12px; }
   .case__site-icon { width: 14px; height: 14px; }
   .case__site-icon img { left: 0; top: 0; width: 14px; height: 14px; }
 
