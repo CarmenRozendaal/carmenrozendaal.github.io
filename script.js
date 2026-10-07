@@ -245,7 +245,7 @@ window.addEventListener('load', () => { setParallaxOrigins(); updateParallax(); 
 // Scroll reveal: blocks fade and slide in from below as they enter the screen.
 // Blocks that appear together come in one after another (90ms apart).
 const revealTargets = [...document.querySelectorAll([
-  '.hero__content', '.hero__visuals', '.hero > .button',
+  '.hero__content', '.hero__main', '.hero__side .crop', '.hero__cta', '.hero > .button',
   '.section-header', '.step', '.project', '.tiles-panel',
   '.cv .section-row', '.cv__panels .table__row',
   '.footer__main', '.footer__bottom',
@@ -394,3 +394,42 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((link) => {
     history.replaceState(null, '', hash === '#top' ? location.pathname + location.search : hash);
   });
 });
+
+// "Kennismaken?": floats at the bottom of the screen until its own spot in the photo
+// scrolls into view, then lands there and scrolls along with the photo
+const heroCta = document.querySelector('.hero__cta');
+if (heroCta) {
+  const heroSide = heroCta.parentElement;
+  const phoneMenu = window.matchMedia('(max-width: 600px)');
+  let ctaOffset = { left: 14, bottom: 12 };
+
+  const readOffset = () => {
+    heroCta.classList.remove('is-floating');
+    heroCta.style.left = '';
+    heroCta.style.bottom = '';
+    const cs = getComputedStyle(heroCta);
+    ctaOffset = { left: parseFloat(cs.left) || 0, bottom: parseFloat(cs.bottom) || 0 };
+  };
+
+  const placeCta = () => {
+    // keep clear of the floating anchor menu at the bottom on phones
+    const gap = phoneMenu.matches ? 80 : 24;
+    const side = heroSide.getBoundingClientRect();
+    const restingBottom = side.bottom - ctaOffset.bottom; // where it sits in the photo
+    const floatLine = window.innerHeight - gap;
+    if (restingBottom > floatLine) {
+      heroCta.classList.add('is-floating');
+      heroCta.style.left = `${side.left + ctaOffset.left}px`;
+      heroCta.style.bottom = `${gap}px`;
+    } else if (heroCta.classList.contains('is-floating')) {
+      heroCta.classList.remove('is-floating');
+      heroCta.style.left = '';
+      heroCta.style.bottom = '';
+    }
+  };
+
+  readOffset();
+  placeCta();
+  window.addEventListener('scroll', placeCta, { passive: true });
+  window.addEventListener('resize', () => { readOffset(); placeCta(); });
+}

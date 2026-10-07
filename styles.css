@@ -294,7 +294,10 @@ p { text-wrap: pretty; }
 .hero__main { aspect-ratio: 5 / 3; border-radius: 24px; }
 .hero__side { position: relative; }
 .hero__side .crop { aspect-ratio: 1; border-radius: 24px; }
-.hero__cta { position: absolute; left: 14px; bottom: 12px; }
+.hero__cta { position: absolute; left: 14px; bottom: 12px; z-index: 5; }
+/* On load the button floats at the bottom of the screen and lands on its spot in
+   the photo while scrolling (script.js sets .is-floating with left/bottom) */
+.hero__cta.is-floating { position: fixed; }
 
 /* ---------- Workflow ---------- */
 
