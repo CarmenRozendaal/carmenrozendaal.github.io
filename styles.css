@@ -153,6 +153,9 @@ p { text-wrap: pretty; }
 
 .pill-group--toggle { gap: 4px; padding: 4px; border-radius: 20px; }
 .pill-group--toggle .pill { border-radius: 16px; }
+/* The selected tab is white, the other one grey, so it is clear which one is shown */
+.pill-group--toggle .pill--dim { opacity: 1; color: var(--muted); }
+.pill-group--toggle .pill--dim:hover { opacity: 1; color: var(--white); }
 
 .button {
   align-self: flex-start;
@@ -558,10 +561,13 @@ p { text-wrap: pretty; }
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
-  .clients { width: max-content; animation: clients-loop 30s linear infinite; }
+  .clients { width: max-content; animation: clients-loop 30s linear infinite; will-change: transform; backface-visibility: hidden; }
   .client,
   .client.client--clone { display: flex; flex: 0 0 200px; }
-  .clients-marquee:hover .clients { animation-play-state: paused; }
+  /* Pause on hover only with a real mouse: on touch screens a tap would leave it stuck */
+  @media (hover: hover) {
+    .clients-marquee:hover .clients { animation-play-state: paused; }
+  }
 
   .table__row {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -574,7 +580,6 @@ p { text-wrap: pretty; }
 }
 
 @media (max-width: 860px) {
-  .case__copyright { text-align: center; }
   :root { --gutter: 24px; --section-y: 72px; }
 
   .h2 { font-size: 40px; }
@@ -867,6 +872,7 @@ body.has-case { overflow: hidden; }
 
 @media (max-width: 860px) {
   .case { --case-top: 72px; --case-x: 12px; --case-pad: 24px; --case-gap: 40px; }
+  .case__copyright { text-align: center; }
   .case__drawer { border-radius: 24px 24px 0 0; }
   .case__intro { padding: 0; margin-top: 8px; }
   .case__title { font-size: 40px; }
@@ -932,11 +938,17 @@ body.has-case { overflow: hidden; }
   .case__footer .footer__title { font-size: 44px; line-height: 1.05; color: var(--white); }
   .case__footer .socials { gap: 10px; }
   .case__footer .social { padding: 11px 18px; font-size: 13px; color: var(--white); }
+  /* Hover and tap state: dark text in the footer colour on the light button */
+  .case__footer .social:hover,
+  .case__footer .social:active { color: var(--footer); }
   .case__copyright { max-width: 280px; margin: 0 auto; }
 }
 
+/* --clients-shift is the exact length of one set of logos in whole pixels (script.js),
+   so the loop restarts on the same spot without a jump */
 @keyframes clients-loop {
-  to { transform: translateX(calc(-50% - var(--clients-gap) / 2)); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--clients-shift, calc(-50% - var(--clients-gap) / 2)), 0, 0); }
 }
 
 /* Homepage photos: slide vertically inside their frame while scrolling (--py set in

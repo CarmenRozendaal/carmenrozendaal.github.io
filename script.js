@@ -193,6 +193,16 @@ if (clientList) {
     copy.setAttribute('aria-hidden', 'true');
     clientList.appendChild(copy);
   });
+  // Measure the real distance from the first logo to its copy, so the marquee
+  // moves exactly one set per loop and restarts without a visible jump
+  const firstClone = clientList.querySelector('.client--clone');
+  const setShift = () => {
+    const shift = firstClone.offsetLeft - clientList.firstElementChild.offsetLeft;
+    if (shift > 0) clientList.style.setProperty('--clients-shift', `-${shift}px`);
+  };
+  setShift();
+  window.addEventListener('resize', setShift);
+  window.addEventListener('load', setShift);
 }
 
 // Homepage photos: subtle parallax while scrolling. Each photo slides vertically
