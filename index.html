@@ -1,169 +1,979 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-
-<!-- Meta data -->
 <head>
-  <meta name="viewport"
-  content="width=device-width,
-  initial-scale=1">
-  <title>Portfolio Carmen</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@200;400;600&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carmen Rozendaal — UX designer</title>
+  <meta name="description" content="Portfolio van Carmen Rozendaal, UX designer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <header class="nav">
+    <a class="brand" href="#top">
+      <span class="brand__logo"><img src="assets/logo-cr.svg" alt="" width="42" height="47"></span>
+      <span class="brand__text">
+        <span class="brand__role">UX designer</span>
+        <span class="brand__name">Carmen Rozendaal</span>
+      </span>
+    </a>
 
-<body>
-    <nav>
-        <div class="container">
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <span class="sr-only">Menu</span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+
+    <div class="nav__panel" id="nav-menu">
+      <nav class="pill-group nav__menu" aria-label="Hoofdmenu">
+        <a class="pill pill--active" href="#top" aria-current="page">Intro</a>
+        <a class="pill" href="#werkwijze">Werkwijze</a>
+        <a class="pill" href="#projecten">Projecten</a>
+        <a class="pill" href="#ervaring">Ervaring</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+      <div class="quick-contact">
+        <a href="mailto:carmenrozendaal@hotmail.com">Mail</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a>
+        <a href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero__content" id="about">
+        <div class="hero__intro">
+          <p class="hero__text">Sinds 2015 opgeleid als digitale duizendpoot en bezig met het realiseren van totaalconcepten. Tot ik mijn passie vond in UX design. Nu gebruik ik dagelijks mijn kritische blik om digitale producten te creëren, te verbeteren en te optimaliseren.</p>
+          <p class="hero__meta">Laatst bijgewerkt — 2026</p>
+        </div>
+        <h1 class="hero__title">Ik duik in complexe vraagstukken en vertaal de wensen van de gebruiker naar toegankelijke digitale producten.</h1>
+      </div>
+
+      <div class="hero__visuals">
+        <div class="crop hero__main" style="--w:227.92%; --h:253%; --l:-18.75%; --t:-76.53%">
+          <img src="assets/hero-main.jpg" alt="Carmen aan het werk achter haar laptop" width="2800" height="1865">
+        </div>
+        <div class="hero__side">
+          <div class="crop" style="--w:99.99%; --h:125%; --l:0%; --t:-5.19%">
+            <img src="assets/hero-side.jpg" alt="Portret van Carmen" width="1200" height="1500">
+          </div>
+          <a class="button button--accent hero__cta" href="#contact">
+            Kennismaken?
+            <img src="assets/icon-coffee.svg" alt="" width="20" height="20">
+          </a>
+        </div>
+      </div>
+
+      <a class="button" href="#projecten">
+        Bekijk projecten
+        <img src="assets/arrow-down.svg" alt="" width="20" height="20">
+      </a>
+    </section>
+
+    <section class="section section--workflow" id="werkwijze">
+      <div class="panel workflow">
+        <header class="section-header">
+          <h2 class="h2">Werkwijze</h2>
+          <p class="lead">Hoe ik concepten vertaal naar functionele en gebruiksvriendelijke designs.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="crop step__img">
+              <img class="crop--cover" src="assets/step-1.jpg" alt="" width="1400" height="933">
+            </div>
+            <div class="step__body">
+              <h3 class="step__title">Onderzoeks fase</h3>
+              <p class="step__text">Site analyse, Websessie, User flows</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="crop step__img" style="--w:128.77%; --h:206%; --l:-0.03%; --t:-53.13%">
+              <img src="assets/step-2.jpg" alt="" width="1200" height="1800">
+            </div>
+            <div class="step__body">
+              <h3 class="step__title">Ontwerp fase</h3>
+              <p class="step__text">Sitemap, Wireframes, AI Prototyping</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="crop step__img" style="--w:178%; --h:126.59%; --l:-42.15%; --t:-13.3%">
+              <img src="assets/step-3.jpg" alt="" width="1800" height="1200">
+            </div>
+            <div class="step__body">
+              <h3 class="step__title">Test fase</h3>
+              <p class="step__text">Feedback, Iteratie en Evaluatie</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="projecten">
+      <header class="section-header">
+        <h2 class="h2">Projecten</h2>
+        <p class="lead">Een overzicht van mijn recent gemaakte werk.</p>
+      </header>
+
+      <!-- "Bekijk proces" opent straks het case-venster van het project (data-case). -->
+      <div class="projects">
+        <article class="project">
+          <div class="project__media">
+            <img class="project__img" src="assets/project-mediaimage.jpg" alt="" width="1111" height="800">
+          </div>
+          <div class="project__meta">
             <div>
-                <p>UX Designer</p>
+              <h3 class="project__title">The Media Image</h3>
+              <p class="project__cat">UX Design @mandelo</p>
             </div>
-            <div class="links">
-            <a href="files/CarmenRozendaal_CV.pdf" target="_blank">CV</a>
-            <a href="http://www.linkedin.com/in/carmen-rozendaal-43105714b" target="_blank">Linkedin</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main>
-
-    <header>
-        <div class="container">
+            <button class="pill-link" type="button" data-case="the-media-image">Bekijk proces</button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__media">
+            <img class="project__img" src="assets/project-gymsociety.jpg" alt="" width="1111" height="800" style="object-position: 50% 0.6%">
+          </div>
+          <div class="project__meta">
             <div>
-                <h1> Hoi, ik ben Carmen Rozendaal </h1>
-                <h2>Ik duik in complexe vraagstukken en vertaal de wensen van de gebruiker naar toegankelijke digitale producten.</p>
+              <h3 class="project__title">The Gym Society</h3>
+              <p class="project__cat">UX design @mandelo</p>
             </div>
-            <div class="right">
-                <img id="photo" src="images/FotoCarmenRond.png" alt="foto Carmen"/>
+            <button class="pill-link" type="button" data-case="the-gym-society">Bekijk proces</button>
+          </div>
+        </article>
+        <article class="project project--wide">
+          <div class="project__media">
+            <img class="project__img" src="assets/project-fishtales.jpg" alt="" width="1112" height="800" style="object-position: 50% 51.6%">
+          </div>
+          <div class="project__meta">
+            <div>
+              <h3 class="project__title">Fish Tales</h3>
+              <p class="project__cat">UX Design @mandelo</p>
             </div>
+            <button class="pill-link" type="button" data-case="fish-tales">Bekijk proces</button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__media project__media--shadow">
+            <img class="project__img" src="assets/project-metabuddy.jpg" alt="" width="1111" height="800" style="object-position: 50% 7.3%">
+          </div>
+          <div class="project__meta">
+            <div>
+              <h3 class="project__title">Metabuddy - AI assistent</h3>
+              <p class="project__cat">UX / UI design @Researchable</p>
+            </div>
+            <button class="pill-link" type="button" data-case="metabuddy">Bekijk proces</button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__media">
+            <img class="project__img" src="assets/project-goudzaken.jpg" alt="" width="1111" height="800">
+          </div>
+          <div class="project__meta">
+            <div>
+              <h3 class="project__title">Goudzaken</h3>
+              <p class="project__cat">UX design @mandelo</p>
+            </div>
+            <button class="pill-link" type="button" data-case="goudzaken">Bekijk proces</button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__media project__media--shadow">
+            <img class="project__img" src="assets/project-bodyclinic.jpg" alt="" width="1111" height="800">
+          </div>
+          <div class="project__meta">
+            <div>
+              <h3 class="project__title">The Body Clinic</h3>
+              <p class="project__cat">UX design @mandelo</p>
+            </div>
+            <button class="pill-link" type="button" data-case="the-body-clinic">Bekijk proces</button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project__media">
+            <img class="project__img" src="assets/project-tonzon.jpg" alt="" width="1111" height="800">
+          </div>
+          <div class="project__meta">
+            <div>
+              <h3 class="project__title">Tonzon</h3>
+              <p class="project__cat">UX Design @mandelo</p>
+            </div>
+            <button class="pill-link" type="button" data-case="tonzon">Bekijk proces</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="klanten">
+      <div class="panel panel--alt tiles-panel">
+        <h2 class="tiles-panel__title">Meer toffe klanten waarvoor ik heb gewerkt</h2>
+        <div class="clients-marquee">
+          <ul class="clients">
+            <li class="client">
+              <img src="assets/client-novature.svg" alt="Novature" width="152" height="20">
+            </li>
+            <li class="client">
+              <span class="client__onnekes" role="img" aria-label="Onnekes Architecten">
+                <img src="assets/client-onnekes-name.svg" alt="" width="82" height="14">
+                <img src="assets/client-onnekes-sub.svg" alt="" width="54" height="8">
+              </span>
+            </li>
+            <li class="client">
+              <span class="crop client__ns" style="--w:173%; --h:173%; --l:-36.06%; --t:-35.33%">
+                <img src="assets/client-ns.png" alt="NS" width="1024" height="768">
+              </span>
+            </li>
+            <li class="client">
+              <img src="assets/client-bronkhorst.svg" alt="Bronkhorst" width="110" height="24">
+            </li>
+            <li class="client">
+              <img src="assets/client-jansen.png" alt="Jansen Techniek" width="137" height="24">
+            </li>
+          </ul>
         </div>
-    </header>
+      </div>
+    </section>
 
-        <section class="projects">
-            <div class="container">
-                <h3>Projecten</h3>
-                <ul>
-                    <li>
-                        <div class="project-image-wrapper">
-                            <img id="Case1" src="images/Case Wijzer.amsterdam_rechthoek.jpg" alt="Case Wijzer.amsterdam"/>
-                        </div>
-                        <h4>wijzer.amsterdam / UX & UI design</h4>
-                        <p>Een redesign van de bestaande interface met een chatbot. Tot stand gekomen uit gebruikersonderzoek & testen.</p>
-                    </li>
-                    
-                    <li>
-                        <div class="project-image-wrapper">
-                            <img id="Case2" src="images/Case Happy Life Hacks_rechthoek.jpg" alt="Case HappyLifeHacks"/>
-                        </div>
-                        <h4>Happy Life Hacks / Visual design</h4>
-                        <p>Een journal-app voor de volgers van Kelly Weekers, gebaseerd op haar gelijknamige bestseller-boek.</p>
-                    </li>
-                    
-                    <li>
-                        <div class="project-image-wrapper">
-                            <img id="Case3" src="images/Case VNOG_rechthoek.jpg" alt="Case VNOG"/>
-                        </div>
-                        <h4>VNOG / UX & UI design</h4>
-                        <p>Een redesign op de bestaande tool n.a.v. een gebruikersonderzoek & verschillende interviews.</p>
-                    </li>
-                    
-                    <li>
-                        <div class="project-image-wrapper">
-                            <img id="Case4" src="images/Case De Geldkooi_rechthoek.jpg" alt="Case De Geldkooi"/>
-                        </div>
-                        <h4>De Geldkooi / UX & UI Design</h4>
-                        <p>Een educatief spel, bedoeld om jongeren te helpen de stappen te zetten naar financiele zelfstandigheid.</p>
-                    </li>
-                    
-                    <li>
-                        <div class="project-image-wrapper">
-                            <img id="Case5" src="images/Case Berkelland_rechthoek.jpg" alt="Case Berkelland"/>
-                        </div>
-                        <h4>Berkelland / UX & UI Design</h4>
-                        <p>Een nieuwe website met een minimale top-navigatie, om zo de gebruiksvriendelijkheid op de site te bevorderen.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="timeline">
-
-            <div class="container">
-                <article class="education">
-                    <h3>Opleidingen</h3>
-                    <ul>
-                        <li>
-                            <h4>2019 - 2023</h4>
-                            <p>Hogeschool van Amsterdam 
-                            <p>Communication & Multimedia Design</p> 
-                            <p>Diploma: Bachelor of Science</p>
-                        </li>
-                        <li>
-                            <h4>2015 - 2019</h4>
-                            <p>Nimeto Utrecht</p>
-                            <p>Ruimtelijke vormgeving</p>
-                            <p>Diploma: MBO Niveau 4</p>
-                        </li>
-                        <li>
-                            <h4>2011 - 2015</h4>
-                            <p>Savorning Lohman</p>
-                            <p>VMBO-TL</p> 
-                            <p>Diploma: Behaald</p>  
-                        </li>
-                    </ul>
-                </article>
-
-                <article class="workexperience">
-                    <h3>Werkervaring</h3>
-                    <ul>
-                        <li>
-                            <h4>2023</h4>
-                            <p>Gravity, Amersfoort</p>
-                            <p>Digital Product Agency</p>
-                            <p>Business Design Stagiair</p>
-                        </li>
-                        <li>
-                            <h4>2021</h4>
-                            <p>Yard, Utrecht</p>
-                            <p>Digital Agency</p>
-                            <p>UX Design Stagiair</p>
-                        </li>
-                        <li>
-                            <h4>2019</h4>
-                            <p>Admore, Amsterdam</p>
-                            <p>Concept & vormgeving</p>
-                            <p>Design Stagiair</p> 
-                        </li>
-                        <li>
-                            <h4>2017</h4>
-                            <p>Studio Jan de Boer, Amsterdam</p>
-                            <p>Boekomslagen</p>
-                            <p>Design Stagiair</p> 
-                        </li>
-                    </ul>
-                </article>
+    <section class="section cv" id="ervaring">
+      <div class="cv__zone">
+        <div class="section-row section-row--center">
+          <h2 class="h2" data-cv-title>Ervaring</h2>
+          <div class="pill-group pill-group--toggle" role="group" aria-label="Toon ervaring of opleiding" data-cv-toggle>
+            <button class="pill pill--current" type="button" data-value="ervaring" aria-pressed="true">Ervaring</button>
+            <button class="pill pill--dim" type="button" data-value="opleiding" aria-pressed="false">Opleiding</button>
+          </div>
         </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <h3>Contact</h2>
-            <p>Ben jij op zoek naar een nieuwe aanwinst voor jouw designteam en spreekt mijn werk je aan? <br> Benader mij dan via onderstaande opties, en ik kom graag op gesprek.</p>
+        <div class="cv__panels">
+          <ul class="table" data-cv-panel="ervaring">
+            <li class="table__row">
+              <span class="table__year">2024 - 2026</span>
+              <span class="table__name">Mandelo</span>
+              <span class="table__desc">Digital Branding Agency</span>
+              <span class="table__role">UX Designer</span>
+            </li>
+            <li class="table__row">
+              <span class="table__year">2022 - 2023</span>
+              <span class="table__name">Gravity</span>
+              <span class="table__desc">Digital Development Agency</span>
+              <span class="table__role">Business Designer (stage)</span>
+            </li>
+            <li class="table__row">
+              <span class="table__year">2021</span>
+              <span class="table__name">Yard</span>
+              <span class="table__desc">Digital Agency</span>
+              <span class="table__role">UX Designer (stage + meewerktraject)</span>
+            </li>
+            <li class="table__row">
+              <span class="table__year">2019</span>
+              <span class="table__name">Admore</span>
+              <span class="table__desc">Concept &amp; Vormgeving</span>
+              <span class="table__role">Grafisch Vormgever (stage)</span>
+            </li>
+          </ul>
 
-            <ul>
-                <li>
-                    <a href="mailto:carmenrozendaal@hotmail.com">
-                        <img id="email" src="images/icon-email_zwart.png" alt="icon email"/>
-                        <p>carmenrozendaal@hotmail.com</p>
-                    </a>
+          <ul class="table" data-cv-panel="opleiding" hidden>
+            <li class="table__row">
+              <span class="table__year">2019 - 2023</span>
+              <span class="table__name">Hogeschool van Amsterdam</span>
+              <span class="table__desc">Communication &amp; Multimedia Design</span>
+              <span class="table__role">Bachelor of Applied Science</span>
+            </li>
+            <li class="table__row">
+              <span class="table__year">2015 - 2019</span>
+              <span class="table__name">Nimeto Utrecht</span>
+              <span class="table__desc">Ruimtelijke Vormgeving</span>
+              <span class="table__role">MBO 4 Diploma</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="toolbox">
+      <div class="panel panel--alt tiles-panel">
+        <h2 class="tiles-panel__title">De toolbox waarmee ik werk</h2>
+        <ul class="tools">
+          <li class="tool" title="Dribbble">
+            <img class="tool__shape" src="assets/tool-dribbble-shape.svg" alt="" width="70" height="70">
+            <img class="tool__img" src="assets/tool-dribbble.png" alt="Dribbble" width="70" height="70">
+          </li>
+          <li class="tool" title="Figma">
+            <img class="tool__figma" src="assets/tool-figma.svg" alt="Figma" width="47" height="70">
+          </li>
+          <li class="tool" title="Icônes">
+            <img class="tool__img tool__img--white" src="assets/tool-3.png" alt="Icônes" width="70" height="70">
+          </li>
+          <li class="tool tool--full" title="Claude">
+            <img src="assets/tool-4.svg" alt="Claude" width="100" height="100">
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__main">
+      <div class="footer__cta">
+        <p class="footer__eyebrow">Zijn wij een match?</p>
+        <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+      </div>
+
+      <ul class="socials">
+        <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+        <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+        <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+      <a class="footer__top" href="#top">
+        Back to top
+        <img src="assets/arrow-up.svg" alt="" width="17" height="18">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Case overlays: opened by the "Bekijk proces" button (and project image) with the same data-case value.
+       Template for a new case: copy this whole <div class="case">, then change
+       id, data-case-panel (= data-case of the project), aria-labelledby + the title id,
+       the texts and the image paths (assets/cases/<project>/). Desktop and mobile layout come from styles.css. -->
+  <div class="case" id="case-the-media-image" data-case-panel="the-media-image" role="dialog" aria-modal="true" aria-labelledby="case-tmi-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" src="assets/cases/the-media-image/cover.jpg" alt="" width="1111" height="800">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX design - @mandelo</p>
+          <h2 class="case__title" id="case-tmi-title">The Media Image</h2>
+          <p class="case__lead">The Media Image (TMI) is een wereldwijd performance-mediabureau, dat merken en organisaties helpt bij het effectief inzetten van digitale media om nieuwe klanten te bereiken.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">Een nieuwe branding en website.</h3>
+            <div class="case__text">
+              <p>TMI wil zich onderscheiden als een challenger in de markt: persoonlijk, transparant en flexibel, met een sterke focus op service en resultaat. Tegelijkertijd wil het bureau internationaal vooroplopen in digitale dienstverlening door innovatie, technologie en data slim te combineren.</p>
+              <p>De huidige website en branding sluiten onvoldoende aan bij deze ambitie. De dienstverlening, cases en kwaliteit van TMI komen niet sterk genoeg naar voren. Verouderde content, een donkere en gedateerde visuele stijl en inconsistenties in layout en tone of voice doen afbreuk aan de merkbeleving. Ook voelt de navigatie en gebruikersflow niet altijd logisch en vanzelfsprekend.</p>
+              <p>Daarom is er behoefte aan een vernieuwde digitale identiteit die beter aansluit bij het internationale, data-driven en award-winning karakter van TMI. De nieuwe branding en website moeten dit sterker uitdragen en TMI duidelijk positioneren als een innovatieve en onderscheidende speler in de markt.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>Omdat TMI in Amerika is gevestigd en de meetings online plaatsvinden, hebben we vooraf een survey opgesteld om tijdens de Websessie alle benodigde informatie te verzamelen. Deze zijn tot slot verwerkt in een debrief.</p>
                 </li>
-            </ul>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>Vanuit de debrief zijn we doorgegaan met het maken van de Sitemap. In de Sitemap staan alle unieke pagina’s die nodig zijn om de site te bouwen. Ook zie je hier de onderliggende pagina-koppelingen in terug.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>De Sitemap vormde het uitgangspunt voor de Wireframes, waarin op basis van de verschillende userflows de contentblokken en CTA’s zijn bepaald.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <img class="case__image" src="assets/cases/the-media-image/process-1.jpg" alt="Debrief: de indruk die de klant van de nieuwe TMI-website moet krijgen" width="2240" height="1400" loading="lazy">
+              <img class="case__image case__image--contain" src="assets/cases/the-media-image/process-2.jpg" alt="Sitemap: conceptnavigatie van de nieuwe website" width="2240" height="1400" loading="lazy">
+              <img class="case__image" src="assets/cases/the-media-image/process-3.jpg" alt="Wireframes van de homepage en het case-overzicht" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://the-media-image.com" target="_blank" rel="noopener">
+                Bekijk deze site
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <div class="crop case__result" style="--w:100.54%; --h:112.69%; --l:0%; --t:-6.36%">
+              <img src="assets/cases/the-media-image/result.jpg" alt="De nieuwe TMI-website op laptop en mobiel" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
         </div>
-    </footer>
 
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div class="case" id="case-the-gym-society" data-case-panel="the-gym-society" role="dialog" aria-modal="true" aria-labelledby="case-the-gym-society-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" style="object-position:50% 8.9%" src="assets/cases/the-gym-society/cover.jpg" alt="" width="1666" height="1200">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX design - @mandelo</p>
+          <h2 class="case__title" id="case-the-gym-society-title">The Gym Society</h2>
+          <p class="case__lead">The Gym Society is een boutique gym die fitness toegankelijker, persoonlijker en minder intimiderend maakt. Met sfeervolle studio’s, professionele coaching en slimme trainingsapparatuur biedt het een doelgerichte workout die in slechts 40 minuten past. De focus ligt op een prettige omgeving, persoonlijke begeleiding en stap voor stap werken aan duurzame vooruitgang.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">Een nieuwe website met een unieke beleving</h3>
+            <div class="case__text">
+              <p>De huidige website van The Gym Society voelt clean, toegankelijk en ontspannen, maar weet de unieke kracht van het concept nog onvoldoende over te brengen. De identiteit gaat verloren door een vrij standaard layout, veel tekst en een gebrek aan krachtige visuele en inhoudelijke hiërarchie. Bezoekers moeten snel begrijpen wat The Gym Society anders maakt, voor wie het is en waarom ze voor deze gym kiezen. Daarbij is een soepele route naar een proefles essentieel: de huidige planningstool werkt functioneel, maar sluit visueel en qua focus onvoldoende aan op de website. Ook social media biedt kansen om het merk sterker te positioneren door meer te laten zien van de community, locaties, het concept en de werking van de e-gym.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>Ons team kreeg een kennismaking met rondleiding door de studio in Arnhem. Hier konden we een indruk krijgen van de unieke sfeer en zien hoe het e-gym programma in z’n werking gaat.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>Bij het opstellen van de sitemap stond de vindbaarheid van de studio’s en de concept-pagina centraal. Ook zou de proefsessie-pagina altijd benaderbaar moeten zijn vanaf elke pagina.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>Met alle input hebben we vervolgens de benodigde wireframes opgesteld en gepresenteert.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <img class="case__image" style="object-position:50% 59%" src="assets/cases/the-gym-society/process-1.jpg" alt="Kennismaking en rondleiding in de studio van The Gym Society" width="1800" height="2400" loading="lazy">
+              <div class="crop case__image" style="--w:100%; --h:87.48%; --l:-0.02%; --t:4.1%; background-color:#819395; --fit:contain">
+                <img src="assets/cases/the-gym-society/process-2.jpg" alt="Sitemap van de nieuwe website" width="2240" height="1260" loading="lazy">
+              </div>
+              <img class="case__image" src="assets/cases/the-gym-society/process-3.jpg" alt="Wireframes van de nieuwe website" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://www.thegymsociety.com/nl" target="_blank" rel="noopener">
+                Bekijk deze site
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <img class="case__image case__result-image" style="object-position:50% 50%" src="assets/cases/the-gym-society/result.jpg" alt="De nieuwe website van The Gym Society" width="2240" height="1614" loading="lazy">
+          </section>
+        </div>
+
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div class="case" id="case-fish-tales" data-case-panel="fish-tales" role="dialog" aria-modal="true" aria-labelledby="case-fish-tales-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" style="object-position:50% 61.5%" src="assets/cases/fish-tales/cover.jpg" alt="" width="1112" height="800">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX design - @mandelo</p>
+          <h2 class="case__title" id="case-fish-tales-title">Fish Tales</h2>
+          <p class="case__lead">Fish Tales is een Nederlands vismerk met een duidelijke missie: mensen laten genieten van de lekkerste vis, nu én in de toekomst. Het merk combineert smaak en kwaliteit met respect voor de oceaan en de mensen die ervan afhankelijk zijn. Door direct samen te werken met zorgvuldig geselecteerde visserijen kiest Fish Tales voor transparantie, traceerbaarheid en duurzaam gevangen vis. Zo wil het laten zien dat goede vis en een gezonde toekomst van de oceanen hand in hand kunnen gaan.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">Een frisse nieuwe website met een sterke product vindbaarheid</h3>
+            <div class="case__text">
+              <p>De huidige website sluit onvoldoende aan bij de uitstraling en digitale strategie van Fish Tales. Het design is verouderd en de content mist een duidelijke structuur en hiërarchie. Daarnaast is er veel herhaling in de content en ontbreekt een helder plan voor de verdere invulling en ontwikkeling van de website. Ook de vindbaarheid van de producten en de uitleg over hun herkomst, verantwoorde productie en kwaliteit verdienen meer aandacht. Juist deze informatie is belangrijk om vertrouwen op te bouwen en de betrouwbaarheid van het merk te versterken.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>We zijn gestart met een Websessie waarin we samen met de klant de wensen en vereisten voor de website hebben besproken. Door de huidige website te analyseren, brachten we de belangrijkste pijnpunten, essentiële informatie en onzekerheden van gebruikers in kaart.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>Op basis van alle verzamelde inzichten brachten we in kaart welke pagina’s nodig waren voor de nieuwe website en vertaalden we dit naar een heldere Sitemap. Omdat Fish Tales internationaal wilde uitbreiden, hielden we hierbij vanaf het begin rekening met een meertalige website.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>Uit alle verkregen informatie werd er tot slot gewerkt aan het opzetten van de Wireframes. Ruim 14 unieke pagina’s werden gemaakt en aan de klant gepresenteerd.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <img class="case__image" src="assets/cases/fish-tales/process-1.jpg" alt="Websessie met de klant" width="2240" height="1400" loading="lazy">
+              <img class="case__image case__image--contain" style="background-color:#0f7dbc" src="assets/cases/fish-tales/process-2.jpg" alt="Meertalige sitemap van de nieuwe website" width="2240" height="1614" loading="lazy">
+              <img class="case__image" style="object-position:50% 3.2%" src="assets/cases/fish-tales/process-3.jpg" alt="Wireframes van de nieuwe website" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://www.fish-tales.com/" target="_blank" rel="noopener">
+                Bekijk deze site
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <div class="crop case__result" style="--w:118.65%; --h:133%; --l:-1.99%; --t:-4.29%; --pos:10.7% 13%">
+              <img src="assets/cases/fish-tales/result.jpg" alt="De nieuwe website van Fish Tales" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+        </div>
+
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div class="case" id="case-metabuddy" data-case-panel="metabuddy" role="dialog" aria-modal="true" aria-labelledby="case-metabuddy-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" style="object-position:50% 19.8%" src="assets/cases/metabuddy/cover.jpg" alt="" width="1111" height="800">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX/ UI design - @Researchable</p>
+          <h2 class="case__title" id="case-metabuddy-title">Metabuddy - AI assistent (mvp)</h2>
+          <p class="case__lead">CropXR is een Ecosysteem van partners dat werkt aan veerkrachtigere gewassen die beter bestand zijn tegen klimaatverandering. Door plantenwetenschap, data, AI en computermodellen te combineren, ontwikkelt CropXR nieuwe methoden om veredeling slimmer en sneller te maken. Zo draagt de organisatie bij aan een duurzamere landbouw en een toekomstbestendige voedselvoorziening.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">De onderzoeksresultaten van CropXR efficiënt geordend met AI</h3>
+            <div class="case__text">
+              <p>Dit project is tot stand gekomen vanuit een samenwerking met @Researchable. Zij zijn een strategische Data &amp; AI-partner uit Groningen die organisaties helpt om complexe vraagstukken te vertalen naar werkende, betrouwbare AI-oplossingen. Vanuit een wetenschappelijke achtergrond combineren ze onderzoek, data en technologie met een praktische aanpak.</p>
+              <p>Samen hebben we een MPV (Minimum Viable Product) ontwikkeld voor het onderzoeksteam van CropXR. Deze AI tool helpt de onderzoeker om efficiënter, resultaten te ordenen en gemakkelijk bestaande rapporten uit te breiden. Een belangrijke eis was dat er veel behoefte is aan een Logbook waarin staat welke data er wordt opgeslagen en inzage in waar de data vandaan komt. Voor deze tool is het LLM (Large Language Model) van Chat-GPT gebruikt en diende deze ook als inspiratie voor de vormgeving.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>Een korte kennismaking met een vragenronde om de gewenste work-flow in kaart te brengen.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>Wireframe presentatie + live feedbackronde.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>Een toegankelijk design in Figma passend bij de huisstijl van CropXR.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <img class="case__image" src="assets/cases/metabuddy/process-1.jpg" alt="Wireframes van de AI-assistent" width="2240" height="1614" loading="lazy">
+              <img class="case__image" style="object-position:50% 72.4%" src="assets/cases/metabuddy/process-2.jpg" alt="Design van de AI-assistent in de huisstijl van CropXR" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://cropxr.org" target="_blank" rel="noopener">
+                Bezoek CropXR
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <img class="case__image case__image--contain case__result-image" style="background-color:#c9d7f4" src="assets/cases/metabuddy/result.jpg" alt="Het ontwerp van Metabuddy" width="2240" height="1614" loading="lazy">
+          </section>
+        </div>
+
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div class="case" id="case-goudzaken" data-case-panel="goudzaken" role="dialog" aria-modal="true" aria-labelledby="case-goudzaken-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" src="assets/cases/goudzaken/cover.jpg" alt="" width="1111" height="800">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX design - @mandelo</p>
+          <h2 class="case__title" id="case-goudzaken-title">Goudzaken</h2>
+          <p class="case__lead">Goudzaken is een Nederlandse specialist in de in- en verkoop van fysiek edelmetaal, met een sterke focus op goud en zilver. Het merk combineert transparante prijzen en deskundige kennis met een persoonlijke aanpak. Vertrouwen, eerlijkheid en zekerheid staan centraal, waarbij klanten zowel online als op locatie terechtkunnen voor aankoop, verkoop en persoonlijk advies.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">Een nieuw platform voor het kopen en verkopen van jouw edelmetaal</h3>
+            <div class="case__text">
+              <p>Uit het verrichte onderzoek kwam naar voren dat de huidige website van Goudzaken onvoldoende aansluit bij de identiteit en ambities van het merk. De site is niet overzichtelijk genoeg, de navigatie kan eenvoudiger en vooral op mobiel ontbreekt rust en scanbaarheid. Tegelijkertijd ligt er een duidelijke kans om Goudzaken sterker te positioneren als een toegankelijke en deskundige partij binnen de edelmetaalmarkt.</p>
+              <p>De nieuwe website moet daarom helder uitleggen wie Goudzaken is, wat zij aanbieden en waarom klanten voor hen kiezen. Daarbij zijn vertrouwen, persoonlijke service en transparantie essentieel, zeker voor bezoekers die nog twijfelen over het kopen of verkopen van edelmetaal. Een overzichtelijke productpresentatie, duidelijke uitleg, sterke klantbeoordelingen en keurmerken moeten deze zekerheid versterken. Daarnaast moet de website sneller, beter vindbaar en toekomstgericht worden ingericht, met ruimte voor extra diensten, kennisdeling en automatisering.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>Een fysieke websessie met de klant op locatie.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>Van een concept Sitemap naar een volledig uitgedacht platform.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>20 desktop wireframes + 14 mobiele wireframes uitgewerkt in Figma.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <img class="case__image case__image--contain" style="background-color:#fefdf9" src="assets/cases/goudzaken/process-1.jpg" alt="Websessie met de klant op locatie" width="2240" height="1260" loading="lazy">
+              <div class="crop case__image" style="--w:73.35%; --h:111%; --l:13.32%; --t:-11.86%; background-color:#214774; --fit:contain">
+                <img src="assets/cases/goudzaken/process-2.jpg" alt="Sitemap van het nieuwe platform" width="2240" height="2179" loading="lazy">
+              </div>
+              <img class="case__image case__image--contain" style="background-color:#214774" src="assets/cases/goudzaken/process-3.jpg" alt="Desktop wireframes" width="2240" height="1614" loading="lazy">
+              <img class="case__image" src="assets/cases/goudzaken/process-4.jpg" alt="Mobiele wireframes" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://www.goudzaken.nl" target="_blank" rel="noopener">
+                Bezoek deze site
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <img class="case__image case__result-image" style="object-position:50% 50%" src="assets/cases/goudzaken/result.jpg" alt="De nieuwe website van Goudzaken" width="2240" height="1614" loading="lazy">
+          </section>
+        </div>
+
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div class="case" id="case-the-body-clinic" data-case-panel="the-body-clinic" role="dialog" aria-modal="true" aria-labelledby="case-the-body-clinic-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" src="assets/cases/the-body-clinic/cover.jpg" alt="" width="1111" height="800">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX design - @mandelo</p>
+          <h2 class="case__title" id="case-the-body-clinic-title">The Body Clinic</h2>
+          <p class="case__lead">The Body Clinic is een toonaangevende cosmetische kliniek met ruim 15 jaar ervaring in cosmetische behandelingen, huidtherapie en medisch afvallen. Met BIG-geregistreerde specialisten, een persoonlijke aanpak en focus op kwaliteit en veiligheid staat de cliënt centraal. Het uitgangspunt is natuurlijke schoonheid: eerlijk advies en behandelingen die aansluiten bij de wensen en behoeften van iedere cliënt.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">Een nieuw jasje voor de website van The Body Clinic</h3>
+            <div class="case__text">
+              <p>Uit het onderzoek is gebleken dat de nieuwe website vooral moet zorgen voor meer vertrouwen, duidelijkheid en conversie. Bezoekers willen snel begrijpen welke behandelingen er zijn, wat deze inhouden, voor wie ze geschikt zijn en welke producten worden gebruikt. Heldere, scanbare informatie over het behandeltraject, veiligheid en mogelijke risico’s helpt onzekerheden weg te nemen. Ervaringen, reviews en voor/na-resultaten spelen hierbij een belangrijke rol.</p>
+              <p>Daarnaast moet de website het premium en deskundige karakter van The Body Clinic sterker uitstralen, zonder dat de toegankelijkheid verloren gaat. Een mobile-first aanpak, betere vindbaarheid en een logische contentstructuur zorgen voor een soepelere gebruikerservaring. Door informatie en conversiemomenten slim in de klantreis te plaatsen, moet de website bezoekers stap voor stap begeleiden van oriëntatie naar het maken van een afspraak of het starten van een behandeling.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>Fysieke websessie met de klant op locatie.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>Uitgedachte navigatiestructuur omgezet naar een heldere Sitemap.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>20 desktop &amp; mobiele wireframes uitgewerkt in Figma.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <img class="case__image case__image--contain" style="background-color:#fefdf9" src="assets/cases/the-body-clinic/process-1.jpg" alt="Websessie met de klant op locatie" width="2240" height="1260" loading="lazy">
+              <img class="case__image case__image--contain" style="background-color:#fefdf9" src="assets/cases/the-body-clinic/process-2.jpg" alt="Sitemap met de nieuwe navigatiestructuur" width="2240" height="1260" loading="lazy">
+              <img class="case__image" style="object-position:50% 0%" src="assets/cases/the-body-clinic/process-3.jpg" alt="Desktop en mobiele wireframes" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://www.bodyclinic.nl" target="_blank" rel="noopener">
+                Bezoek deze site
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <img class="case__image case__result-image" style="object-position:50% 50%" src="assets/cases/the-body-clinic/result.jpg" alt="De nieuwe website van The Body Clinic" width="2240" height="1614" loading="lazy">
+          </section>
+        </div>
+
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <div class="case" id="case-tonzon" data-case-panel="tonzon" role="dialog" aria-modal="true" aria-labelledby="case-tonzon-title" hidden>
+    <div class="case__dimmer"></div>
+    <div class="case__scroller">
+      <article class="case__drawer">
+        <div class="crop case__cover">
+          <img class="crop--cover" style="object-position:50% 39.4%" src="assets/cases/tonzon/cover.jpg" alt="" width="1111" height="800">
+          <button class="case__close" type="button" aria-label="Sluiten" data-case-close>
+            <picture>
+              <source media="(max-width: 600px)" srcset="assets/icon-close-sm.svg">
+              <img src="assets/icon-close.svg" alt="" width="20" height="20">
+            </picture>
+          </button>
+        </div>
+
+        <header class="case__intro">
+          <p class="case__eyebrow">UX design - @mandelo</p>
+          <h2 class="case__title" id="case-tonzon-title">Tonzon</h2>
+          <p class="case__lead">TONZON is een Nederlandse specialist in innovatieve en duurzame isolatieoplossingen. Met slimme technologie, waaronder de bekende Thermoskussens, helpt het bedrijf woningen en gebouwen energiezuiniger, comfortabeler en toekomstbestendiger te maken. Vanuit ruim 45 jaar ervaring combineert TONZON innovatie, deskundigheid en duurzaamheid, met als doel warmteverlies te beperken en de impact op het milieu zo klein mogelijk te houden.</p>
+        </header>
+
+        <hr class="case__divider">
+
+        <div class="case__process">
+          <section class="case__entry">
+            <h3 class="case__heading">1 plek voor particulieren én zakelijke klanten van Tonzon</h3>
+            <div class="case__text">
+              <p>Uit het onderzoek blijkt dat de huidige TONZON-website een goede basis heeft, met een frisse uitstraling, duidelijke CTA’s en een snelle route naar producten. Tegelijkertijd is de site op belangrijke punten onoverzichtelijk. Vooral de vele menu-items en subcategorieën maken navigatie lastig, terwijl lange teksten en een gebrek aan visuele hiërarchie de scanbaarheid verminderen.</p>
+              <p>De nieuwe website moet daarom eenvoudiger, overzichtelijker en meer gericht op de gebruiker worden ingericht, met extra aandacht voor mobiel. Een krachtige zoekfunctie, duidelijke productpresentatie en een logische scheiding tussen particuliere en zakelijke bezoekers kunnen daarbij helpen. Door daarnaast meer eigen beeld en een sterke visuele hiërarchie toe te voegen, kan TONZON zijn innovatieve en duurzame karakter overtuigender uitdragen.</p>
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--steps">
+            <div class="case__steps-intro">
+              <h3 class="case__heading">De procestappen die zijn doorlopen</h3>
+              <ol class="case__steps">
+                <li class="case__step">
+                  <span class="case__step-number">1</span>
+                  <p>Fysieke websessie met de klant op locatie.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">2</span>
+                  <p>2 sitemaps voor de Particuliere en de Zakelijke userflow.</p>
+                </li>
+                <li class="case__step">
+                  <span class="case__step-number">3</span>
+                  <p>24 gezamenlijke wireframes die dynamisch kunnen worden ingezet door TONZON.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="case__images">
+              <div class="crop case__image" style="--w:102%; --h:89.25%; --l:-0.97%; --t:5.33%; background-color:#fefdf9; --fit:contain">
+                <img src="assets/cases/tonzon/process-1.jpg" alt="Websessie met de klant op locatie" width="2240" height="1260" loading="lazy">
+              </div>
+              <img class="case__image case__image--contain" style="background-color:#e5d1b9" src="assets/cases/tonzon/process-2.jpg" alt="Sitemaps voor de particuliere en zakelijke userflow" width="2240" height="1614" loading="lazy">
+              <img class="case__image" src="assets/cases/tonzon/process-3.jpg" alt="Wireframes van de nieuwe website" width="2240" height="1614" loading="lazy">
+            </div>
+          </section>
+
+          <section class="case__entry case__entry--tinted case__entry--result">
+            <div class="case__heading-row">
+              <h3 class="case__heading">Het resultaat</h3>
+              <a class="pill-link case__site-link" href="https://tonzon.nl" target="_blank" rel="noopener">
+                Bezoek deze site
+                <span class="case__site-icon"><picture><source media="(max-width: 600px)" srcset="assets/icon-external-sm.svg"><img src="assets/icon-external.svg" alt="" width="12" height="12"></picture></span>
+              </a>
+            </div>
+            <img class="case__image case__result-image" style="object-position:50% 50%" src="assets/cases/tonzon/result.jpg" alt="De nieuwe website van Tonzon" width="2240" height="1614" loading="lazy">
+          </section>
+        </div>
+
+        <footer class="footer case__footer">
+          <div class="footer__main">
+            <div class="footer__cta">
+              <p class="footer__eyebrow">Meer weten over dit project?</p>
+              <a class="footer__title" href="mailto:carmenrozendaal@hotmail.com">Get in Touch</a>
+            </div>
+            <ul class="socials">
+              <li><a class="social" href="mailto:carmenrozendaal@hotmail.com">Mail</a></li>
+              <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a></li>
+              <li><a class="social" href="assets/cv/Carmen_CV_2026.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </div>
+          <p class="case__copyright">© 2026 — Portfolio Carmen Rozendaal. Alle rechten voorbehouden.</p>
+        </footer>
+      </article>
+    </div>
+    <button class="case__float" type="button" aria-label="Sluiten" data-case-close>
+      <img src="assets/icon-close.svg" alt="" width="16" height="16">
+    </button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-    
-
-
-
+</html>
