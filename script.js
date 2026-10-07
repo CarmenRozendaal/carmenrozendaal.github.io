@@ -464,3 +464,41 @@ document.querySelectorAll('[data-case-top]').forEach((link) => {
     requestAnimationFrame(step);
   });
 });
+
+// Hero on larger screens: narrow the intro column until the intro text is as tall as
+// the big title next to it, so both start and end on the same line. The line height
+// of the intro is then nudged (1.35–1.7) to close the last few pixels. Of the widths
+// that need the least nudging, the widest one wins.
+const heroContent = document.querySelector('.hero__content');
+const heroText = document.querySelector('.hero__text');
+const heroTitle = document.querySelector('.hero__title');
+const heroSideBySide = window.matchMedia('(min-width: 861px)');
+const fitHeroIntro = () => {
+  heroText.style.removeProperty('line-height');
+  if (!heroSideBySide.matches) {
+    heroContent.style.removeProperty('--hero-intro-w');
+    return;
+  }
+  const fontSize = parseFloat(getComputedStyle(heroText).fontSize);
+  const lineHeight = parseFloat(getComputedStyle(heroText).lineHeight);
+  let best = null;
+  for (let width = 380; width >= 220; width -= 5) {
+    heroContent.style.setProperty('--hero-intro-w', `${width}px`);
+    const lines = Math.round(heroText.offsetHeight / lineHeight);
+    const needed = heroTitle.offsetHeight / lines;
+    const nudge = Math.abs(needed - lineHeight);
+    if (!best || nudge < best.nudge - 0.25) best = { width, needed, nudge };
+  }
+  heroContent.style.setProperty('--hero-intro-w', `${best.width}px`);
+  const fitted = Math.min(fontSize * 1.7, Math.max(fontSize * 1.35, best.needed));
+  heroText.style.lineHeight = `${fitted.toFixed(2)}px`;
+};
+let heroFitQueued = false;
+const queueHeroFit = () => {
+  if (heroFitQueued) return;
+  heroFitQueued = true;
+  setTimeout(() => { heroFitQueued = false; fitHeroIntro(); }, 100);
+};
+fitHeroIntro();
+if (document.fonts) document.fonts.ready.then(fitHeroIntro);
+window.addEventListener('resize', queueHeroFit);

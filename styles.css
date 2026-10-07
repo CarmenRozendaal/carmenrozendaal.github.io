@@ -989,6 +989,20 @@ body.has-case { overflow: hidden; }
   .nav__menu .pill { padding: 12px 4px; font-size: 12px; }
 }
 
+/* Hero on larger screens: intro text and big title side by side, with
+   "Laatst bijgewerkt" on its own line below both instead of next to the title.
+   The intro column width is fitted in script.js so both texts start and end on the same line */
+@media (min-width: 861px) {
+  .hero__content { display: grid; grid-template-columns: var(--hero-intro-w, 290px) minmax(0, 1fr); gap: 32px 80px; align-items: start; }
+  .hero__intro { display: contents; }
+  .hero__text { grid-column: 1; grid-row: 1; }
+  .hero__title { grid-column: 2; grid-row: 1; }
+  .hero__meta { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (min-width: 861px) and (max-width: 1280px) {
+  .hero__content { grid-template-columns: var(--hero-intro-w, 260px) minmax(0, 1fr); column-gap: 48px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .icon-coffee__steam { animation: none; stroke-dashoffset: 0; }
   .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
