@@ -296,6 +296,7 @@ menu.classList.add('has-indicator');
 
 let activeLink = null;
 function setActive(link, instant = false) {
+  if (link && link.offsetWidth === 0) link = null; // item hidden on this screen size (Contact on phones)
   // Coming back from "no item": place the indicator directly, then fade it in
   if (link && indicator.classList.contains('is-hidden')) instant = true;
   indicator.classList.toggle('is-hidden', !link);
@@ -334,7 +335,7 @@ function spy() {
 }
 
 window.addEventListener('scroll', spy, { passive: true });
-window.addEventListener('resize', () => activeLink && setActive(activeLink, true));
+window.addEventListener('resize', () => { if (activeLink) setActive(activeLink, true); else spy(); });
 setActive(linkFor('#top'), true);
 spy();
 document.fonts && document.fonts.ready.then(() => activeLink && setActive(activeLink, true));

@@ -618,7 +618,11 @@ p { text-wrap: pretty; }
     top: auto;
     bottom: calc(16px + env(safe-area-inset-bottom));
     left: 50%;
-    width: calc(100% - 2 * var(--gutter));
+    width: max-content; /* only as wide as its items, centred */
+    /* equal-width items: every column is as wide as the longest label */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     margin: 0;
     transform: translateX(-50%);
   }
@@ -628,7 +632,10 @@ p { text-wrap: pretty; }
   /* keep the last footer line clear of the floating menu */
   .footer:not(.case__footer) { padding-bottom: calc(48px + 64px + env(safe-area-inset-bottom)); }
   /* Bigger tap targets: taller items, spread evenly over the full width */
-  .nav__menu .pill { flex: 1 1 auto; padding: 12px 5px; font-size: 13px; text-align: center; }
+  .nav__menu .pill { padding: 12px 6px; font-size: 12.5px; text-align: center; }
+  /* Contact is left out on phones so the other items get more room (the contact
+     block is at the bottom of the page anyway) */
+  .nav__menu .pill[href="#contact"] { display: none; }
 
   .h2 { font-size: 34px; }
   .hero { padding-top: 64px; }
@@ -968,7 +975,7 @@ body.has-case { overflow: hidden; }
 /* Very small phones (e.g. 320px): squeeze the anchor menu so all five items fit */
 @media (max-width: 360px) {
   .nav__menu { max-width: calc(100% - 16px); }
-  .nav__menu .pill { padding: 12px 3px; font-size: 12px; }
+  .nav__menu .pill { padding: 12px 4px; font-size: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
