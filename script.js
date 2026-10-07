@@ -436,3 +436,21 @@ if (heroCta) {
   window.addEventListener('scroll', placeCta, { passive: true });
   window.addEventListener('resize', () => { readOffset(); placeCta(); });
 }
+
+// "Terug naar boven" in the case footers scrolls the case itself back to the top
+document.querySelectorAll('[data-case-top]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const scroller = link.closest('.case__scroller');
+    const startY = scroller.scrollTop;
+    if (calmMotion.matches || startY < 2) { scroller.scrollTop = 0; return; }
+    const duration = Math.min(1200, Math.max(600, 450 + startY * 0.12));
+    const start = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      scroller.scrollTop = startY * (1 - easeInOutCubic(t));
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+});

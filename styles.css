@@ -574,6 +574,7 @@ p { text-wrap: pretty; }
 }
 
 @media (max-width: 860px) {
+  .case__copyright { text-align: center; }
   :root { --gutter: 24px; --section-y: 72px; }
 
   .h2 { font-size: 40px; }
@@ -849,7 +850,9 @@ body.has-case { overflow: hidden; }
 
 .case__footer { gap: 75px; padding: 100px 80px 48px; }
 .case__footer .footer__main { gap: 40px; }
-.case__copyright { font-size: 14px; text-align: center; text-wrap: balance; }
+.case__copyright { font-size: 14px; text-align: left; text-wrap: balance; }
+/* Case footer bottom row: copyright left, "Terug naar boven" right (stacked and centred on smaller screens) */
+.case__footer .footer__bottom { width: 100%; }
 
 @media (max-width: 1280px) {
   .case { --case-x: var(--gutter); }
