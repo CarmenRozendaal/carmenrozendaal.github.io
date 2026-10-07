@@ -457,7 +457,6 @@ p { text-wrap: pretty; }
   background: url("assets/line.svg") left bottom / 100% 1px no-repeat;
 }
 .table__year {
-  align-self: start;
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 24px;
