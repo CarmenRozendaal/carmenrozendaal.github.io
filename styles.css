@@ -130,17 +130,21 @@ p { text-wrap: pretty; }
 .pill--active:hover { opacity: 1; }
 .pill--current { font-weight: 600; }
 
-/* Anchor menu active state: a white indicator slides to the active item
+/* Anchor menu active state: a translucent white indicator slides to the active item
    (script.js); without JS the active pill keeps its own white background */
 .nav__menu { position: relative; }
-.nav__menu .pill { position: relative; z-index: 1; transition: color .3s ease .12s, opacity .2s; } /* text colour follows the sliding indicator */
+.nav__menu .pill { position: relative; z-index: 1; transition: color .3s ease, opacity .2s; }
+/* Menu colours: items white at 80%, the active item fully white on a 20% white pill */
+.nav__menu .pill { color: rgba(255, 255, 255, .8); }
+.nav__menu .pill:hover { opacity: 1; color: var(--white); }
+.nav__menu .pill--active { background: rgba(255, 255, 255, .2); color: var(--white); }
 .nav__menu.has-indicator .pill--active { background: transparent; }
 .nav__indicator {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 20px;
-  background: var(--white);
+  background: rgba(255, 255, 255, .2);
   pointer-events: none;
   transition: transform .45s cubic-bezier(.22, 1, .36, 1), width .45s cubic-bezier(.22, 1, .36, 1), opacity .3s ease;
 }
