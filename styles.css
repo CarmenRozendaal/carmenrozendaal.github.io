@@ -1009,7 +1009,7 @@ body.has-case { overflow: hidden; }
     background-clip: text;
     animation:
       hero-word 1s cubic-bezier(.22, 1, .36, 1) calc(.3s + var(--i) * 100ms) forwards,
-      hero-shine 1s cubic-bezier(.22, 1, .36, 1) calc(.3s + var(--i) * 100ms) forwards;
+      hero-shine 1.8s cubic-bezier(.45, 0, .25, 1) calc(.3s + var(--i) * 100ms) forwards;
   }
 }
 @keyframes hero-word {
