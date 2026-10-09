@@ -465,33 +465,70 @@ document.querySelectorAll('[data-case-top]').forEach((link) => {
   });
 });
 
-// Hero on larger screens: narrow the intro column until the intro text is as tall as
-// the big title next to it, so both start and end on the same line. The line height
-// of the intro is then nudged (1.35–1.7) to close the last few pixels. Of the widths
-// that need the least nudging, the widest one wins.
+// Hero title: when the site opens, the words appear one by one from left to right,
+// as if the sentence is being read out. Skipped when reduced motion is preferred.
+const heroHeading = document.querySelector('.hero__title');
+if (heroHeading && !calmMotion.matches) {
+  const words = heroHeading.textContent.trim().split(/\s+/);
+  heroHeading.setAttribute('aria-label', words.join(' '));
+  heroHeading.textContent = '';
+  words.forEach((word, index) => {
+    const span = document.createElement('span');
+    span.className = 'hero__word';
+    span.setAttribute('aria-hidden', 'true');
+    span.style.setProperty('--i', index);
+    span.textContent = word;
+    heroHeading.append(span, index < words.length - 1 ? ' ' : '');
+  });
+}
+
+// Hero on larger screens: line up the intro text with the big title next to it by the
+// letters themselves rather than their boxes: the tops of the capitals on the first
+// lines and the baselines of the last lines. The intro column is narrowed to a fitting
+// number of lines, its line height is nudged (1.35–1.7) to close the gap, and it is
+// shifted down so the capitals start level. Of the widths that need the least
+// nudging, the widest one wins.
 const heroContent = document.querySelector('.hero__content');
 const heroText = document.querySelector('.hero__text');
 const heroTitle = document.querySelector('.hero__title');
 const heroSideBySide = window.matchMedia('(min-width: 861px)');
+const glyphCanvas = document.createElement('canvas').getContext('2d');
+const glyphMetrics = (el) => {
+  const cs = getComputedStyle(el);
+  glyphCanvas.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const m = glyphCanvas.measureText('H');
+  return { ascent: m.fontBoundingBoxAscent, descent: m.fontBoundingBoxDescent, cap: m.actualBoundingBoxAscent };
+};
+// Distance from the top of a line box to the top of its capitals
+const capTop = (m, lineHeight) => (lineHeight - m.ascent - m.descent) / 2 + m.ascent - m.cap;
 const fitHeroIntro = () => {
   heroText.style.removeProperty('line-height');
+  heroText.style.removeProperty('margin-top');
   if (!heroSideBySide.matches) {
     heroContent.style.removeProperty('--hero-intro-w');
     return;
   }
   const fontSize = parseFloat(getComputedStyle(heroText).fontSize);
   const lineHeight = parseFloat(getComputedStyle(heroText).lineHeight);
+  const titleLineHeight = parseFloat(getComputedStyle(heroTitle).lineHeight);
+  const textGlyphs = glyphMetrics(heroText);
+  const titleGlyphs = glyphMetrics(heroTitle);
   let best = null;
   for (let width = 380; width >= 220; width -= 5) {
     heroContent.style.setProperty('--hero-intro-w', `${width}px`);
     const lines = Math.round(heroText.offsetHeight / lineHeight);
-    const needed = heroTitle.offsetHeight / lines;
+    const titleLines = Math.round(heroTitle.offsetHeight / titleLineHeight);
+    if (lines < 2) continue;
+    // first capital top to last baseline must span the same distance on both sides
+    const needed = ((titleLines - 1) * titleLineHeight + titleGlyphs.cap - textGlyphs.cap) / (lines - 1);
     const nudge = Math.abs(needed - lineHeight);
     if (!best || nudge < best.nudge - 0.25) best = { width, needed, nudge };
   }
+  if (!best) return;
   heroContent.style.setProperty('--hero-intro-w', `${best.width}px`);
   const fitted = Math.min(fontSize * 1.7, Math.max(fontSize * 1.35, best.needed));
   heroText.style.lineHeight = `${fitted.toFixed(2)}px`;
+  heroText.style.marginTop = `${(capTop(titleGlyphs, titleLineHeight) - capTop(textGlyphs, fitted)).toFixed(2)}px`;
 };
 let heroFitQueued = false;
 const queueHeroFit = () => {
