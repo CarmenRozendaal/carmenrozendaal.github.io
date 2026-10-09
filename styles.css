@@ -988,33 +988,39 @@ body.has-case { overflow: hidden; }
   .nav__menu .pill { padding: 12px 4px; font-size: 12px; }
 }
 
-/* Hero title read-out: each word (split in script.js) fades in from slightly below,
-   one after the other from left to right, and a soft light glints across it as if
-   the letters catch a reflection */
+/* Hero title read-out: the words appear one after the other from left to right. Within
+   each word a soft glint of light travels from left to right and the letters fade in
+   right behind it, at the same speed: dark text left of the glint, nothing yet to the
+   right of it. Each word also rises slightly into place. */
 .hero__word {
   display: inline-block;
   opacity: 0;
-  animation: hero-word 1s cubic-bezier(.22, 1, .36, 1) calc(.3s + var(--i) * 100ms) forwards;
+  animation: hero-word 1.3s cubic-bezier(.45, 0, .25, 1) calc(.3s + var(--i) * 80ms) forwards;
 }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .hero__word {
     /* room for descenders (g, j, p) inside the painted text */
     padding-bottom: .12em;
     margin-bottom: -.12em;
+    opacity: 1;
     color: transparent;
     background: linear-gradient(100deg,
-      var(--ink) 40%, var(--accent) 46%, #eef0ff 50%, var(--accent) 54%, var(--ink) 60%)
+      var(--ink) 40%, var(--accent) 46%, #eef0ff 50%, rgba(238, 240, 255, 0) 58%)
       100% 0 / 300% 100% no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     animation:
-      hero-word 1s cubic-bezier(.22, 1, .36, 1) calc(.3s + var(--i) * 100ms) forwards,
-      hero-shine 1.8s cubic-bezier(.45, 0, .25, 1) calc(.3s + var(--i) * 100ms) forwards;
+      hero-rise 1.3s cubic-bezier(.45, 0, .25, 1) calc(.3s + var(--i) * 80ms) both,
+      hero-shine 1.3s cubic-bezier(.45, 0, .25, 1) calc(.3s + var(--i) * 80ms) both;
   }
 }
 @keyframes hero-word {
   from { opacity: 0; transform: translateY(.3em); }
   to { opacity: 1; transform: none; }
+}
+@keyframes hero-rise {
+  from { transform: translateY(.3em); }
+  to { transform: none; }
 }
 @keyframes hero-shine {
   from { background-position: 100% 0; }
