@@ -233,9 +233,13 @@ function updateParallax() {
     let py = -d * r.height * 0.08;
     if (frame.classList.contains('parallax--natural')) {
       // Hero photos: exactly the Figma crop at the top of the page, then slide down
-      // slower than the page, within the photo's own room above the frame
+      // slower than the page, within the photo's own room above the frame. A photo
+      // with little room (the portrait) moves slower, so it keeps moving until the
+      // frame has scrolled out of view instead of stopping early.
       const roomDown = -img.offsetTop;
-      py = Math.min(roomDown, window.scrollY * 0.08);
+      const travel = r.bottom + window.scrollY; // scroll distance until the frame is gone
+      const rate = Math.min(0.08, roomDown / travel);
+      py = Math.min(roomDown, window.scrollY * rate);
     }
     img.style.setProperty('--py', `${py.toFixed(1)}px`);
   });
