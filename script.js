@@ -264,7 +264,7 @@ const revealTargets = [...document.querySelectorAll([
 ].join(', '))].filter((el) => !el.closest('.case')); // not inside the case overlays
 
 if (!calmMotion.matches) {
-  document.documentElement.classList.add('js-reveal');
+  document.documentElement.classList.add('js-reveal', 'reveal-ready');
   revealTargets.forEach((el) => el.classList.add('reveal'));
 
   const revealInView = () => {
@@ -274,7 +274,8 @@ if (!calmMotion.matches) {
     let order = 0;
     revealTargets.forEach((el) => {
       if (el.classList.contains('is-visible')) return;
-      if (atBottom || el.getBoundingClientRect().top < limit) {
+      // The first screen (hero) always comes in when the site opens, also the floating CTA
+      if (atBottom || el.closest('.hero') || el.getBoundingClientRect().top < limit) {
         el.style.setProperty('--reveal-delay', `${Math.min(order, 4) * 0.09}s`);
         el.classList.add('is-visible');
         order += 1;
